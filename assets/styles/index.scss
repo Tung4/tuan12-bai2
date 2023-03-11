@@ -18,3 +18,40 @@ body {
   direction: ltr;
   overscroll-behavior: contain;
 }
+
+.app {
+  margin: 15% auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  $size: 15rem;
+  width: $size;
+  height: $size;
+  line-height: $size;
+
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ccc;
+
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &::before {
+    counter-increment: count 1;
+  }
+
+  &:nth-child(1) {
+    background-color: red;
+  }
+
+  &:nth-child(1) {
+    background-color: blue;
+  }
+  &:nth-child(1) {
+    background-color: green;
+  }
+}
